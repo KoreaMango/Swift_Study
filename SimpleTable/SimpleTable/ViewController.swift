@@ -75,11 +75,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         if indexPath.section < 2 {
-            let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath)
+            let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath) // 뷰 재사용 메소드
             
             let text: String = indexPath.section == 0 ? korean[indexPath.row]: english[indexPath.row]
             cell.textLabel?.text = text
-            
+            // 셀의 재사용을 확인하는 코드
+//            if indexPath.row == 1 {
+//                cell.backgroundColor = UIColor.red
+//            }else{
+//                cell.backgroundColor = UIColor.white
+//            }
             return cell
 
         }else{// 강제 캐스팅 as ! CustomTableViewCell
@@ -99,6 +104,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         return nil
     }
+    
+    
+    
+    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        // 세그가 여러개인 경우 segue.identifier
+        
+        guard let nextViewController: SecondViewController =
+            segue.destination as? SecondViewController else {
+            return
+        }
+        
+        guard let cell: UITableViewCell = sender as? UITableViewCell else {
+            return
+        }
+        // 프로퍼티에 넣어줘서 보내줘야함
+        // 바로 레이블에 넣지 못함
+        // 세컨드 뷰의 레이블은 아직 생성되지 않음
+        nextViewController.textToset = cell.textLabel?.text
+    }
+    
+
+    
+    
 }
 
 
