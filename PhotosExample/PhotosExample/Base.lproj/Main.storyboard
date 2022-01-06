@@ -31,6 +31,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="PsI-wp-ZFv"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eCZ-x8-peI"/>
                                 </connections>
                             </tableView>
                         </subviews>
