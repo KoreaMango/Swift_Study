@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     
     var numberOfCell: Int = 10
     let cellIdentifier: String = "cell"
@@ -22,7 +22,10 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.numberOfCell+=1
+        collectionView.reloadData()
+    }
     
     
     override func viewDidLoad() {
