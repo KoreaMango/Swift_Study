@@ -11,6 +11,12 @@ import Photos
 class ViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate, PHPhotoLibraryChangeObserver{
     
     @IBOutlet weak var tableView: UITableView!
+
+
+    @IBAction func touchUpRefreshButton( _sender: UIBarButtonItem){
+        self.tableView.reloadSections(IndexSet(0...0), with: .automatic)
+    }
+    
     
     var fetchResult: PHFetchResult<PHAsset>!
     let imageManager: PHCachingImageManager = PHCachingImageManager()
