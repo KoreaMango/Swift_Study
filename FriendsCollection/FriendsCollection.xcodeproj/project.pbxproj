@@ -13,6 +13,8 @@
 		042C5B7C27883F8500D8B63F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042C5B7A27883F8500D8B63F /* Main.storyboard */; };
 		042C5B7E27883F8500D8B63F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042C5B7D27883F8500D8B63F /* Assets.xcassets */; };
 		042C5B8127883F8500D8B63F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042C5B7F27883F8500D8B63F /* LaunchScreen.storyboard */; };
+		042C5B89278863F300D8B63F /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C5B88278863F300D8B63F /* FriendCollectionViewCell.swift */; };
+		042C5B8B2788654B00D8B63F /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C5B8A2788654B00D8B63F /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		042C5B7D27883F8500D8B63F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		042C5B8027883F8500D8B63F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		042C5B8227883F8500D8B63F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		042C5B88278863F300D8B63F /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
+		042C5B8A2788654B00D8B63F /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Friend.swift; path = ../MyFriends/Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		042C5B6827883F8500D8B63F = {
 			isa = PBXGroup;
 			children = (
+				042C5B8A2788654B00D8B63F /* Friend.swift */,
 				042C5B7327883F8500D8B63F /* FriendsCollection */,
 				042C5B7227883F8500D8B63F /* Products */,
 			);
@@ -60,6 +65,7 @@
 				042C5B7627883F8500D8B63F /* SceneDelegate.swift */,
 				042C5B7827883F8500D8B63F /* ViewController.swift */,
 				042C5B7A27883F8500D8B63F /* Main.storyboard */,
+				042C5B88278863F300D8B63F /* FriendCollectionViewCell.swift */,
 				042C5B7D27883F8500D8B63F /* Assets.xcassets */,
 				042C5B7F27883F8500D8B63F /* LaunchScreen.storyboard */,
 				042C5B8227883F8500D8B63F /* Info.plist */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042C5B89278863F300D8B63F /* FriendCollectionViewCell.swift in Sources */,
 				042C5B7927883F8500D8B63F /* ViewController.swift in Sources */,
+				042C5B8B2788654B00D8B63F /* Friend.swift in Sources */,
 				042C5B7527883F8500D8B63F /* AppDelegate.swift in Sources */,
 				042C5B7727883F8500D8B63F /* SceneDelegate.swift in Sources */,
 			);
