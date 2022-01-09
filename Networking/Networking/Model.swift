@@ -8,7 +8,7 @@
 import Foundation
 
 struct APIResponse: Codable{
-    let result: [Friend]
+    let results: [Friend]
 }
 
 struct Friend: Codable{
