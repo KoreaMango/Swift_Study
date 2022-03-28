@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // 앱을 쓸때마다 서버에서 사진을 들고 올 수 없으니 캐시를 사용해 앱에 저장해 놓겠다.
+        // 캐시에 저장한다.
+        let temporaryDircetory = NSTemporaryDirectory()
+        let urlCache = URLCache(memoryCapacity: 25_000_000, diskCapacity: 50_000_00, diskPath: temporaryDircetory)
+        URLCache.shared = urlCache
+        
         // orderUpdateNotification이 실행되면 현재 오브젝트에 updateOrderBadge를 실행히킨다.
         NotificationCenter.default.addObserver(self, selector: #selector(updateOrderBadge), name: MenuController.orderUpdateNotification, object: nil)
         

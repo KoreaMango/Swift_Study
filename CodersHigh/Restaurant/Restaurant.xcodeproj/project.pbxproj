@@ -108,8 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				04C52BA627EDB30100FA53E4 /* ViewController.swift */,
-				04F27C8E27EF7231003857CC /* MenuDetailViewController.swift */,
 				04F27C8827EF719E003857CC /* CategoryTableViewController.swift */,
+				04F27C8E27EF7231003857CC /* MenuDetailViewController.swift */,
 				04F27C8A27EF71AC003857CC /* MenuTableViewController.swift */,
 				04F27C8C27EF71B4003857CC /* OrderTableViewController.swift */,
 				04B356E527F16A3000913AD8 /* OrderConfirmationViewController.swift */,
