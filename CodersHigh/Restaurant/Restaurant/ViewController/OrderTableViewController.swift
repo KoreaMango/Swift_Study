@@ -9,6 +9,7 @@ import UIKit
 
 class OrderTableViewController: UITableViewController {
 
+    var orderMinutes = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -87,15 +88,55 @@ class OrderTableViewController: UITableViewController {
         return true
     }
     */
-
-    /*
+    
+    // 
+    @IBAction func submitTapped(_ sender: Any) {
+        let orderTotal = MenuController.shared.order.menuItems.reduce(0.0){
+            (result, menuItem) -> Double in
+            return result + menuItem.price
+        }
+        let formattedOrder = String(format:"$%.2f", orderTotal)
+        // alert 사용은 자제하는게 좋다.
+        let alert = UIAlertController(title: "ConfirmOrder", message: "You are about to submit your order with a total of \(formattedOrder)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title:"Submit", style: .default){
+            action in
+            self.uploadOrder()
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert,animated: true,completion: nil)
+    }
+                        
+   func uploadOrder(){
+       let menuIds = MenuController.shared.order.menuItems.map {$0.id}
+       MenuController.shared.submitOrder(forMenuIDs: menuIds){
+           (minutes) in
+           DispatchQueue.main.async {
+               if let minutes = minutes {
+                   self.orderMinutes = minutes
+                   self.performSegue(withIdentifier:"ConfirmationSegue" , sender: nil)
+               }
+           }
+       }
+    }
+    // 이 함수는 목적지에 만들어져야한다.
+    // OrderConfirm 뷰컨트롤러의 exit 에 이 함수가 뜬다.
+    @IBAction func unwindToOrderList(segue:UIStoryboardSegue){
+        if segue.identifier == "DismissConfirmation" {
+            MenuController.shared.order.menuItems.removeAll()
+        }
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "ConfirmationSegue" {
+            let orderConfirmationViewController = segue.destination as!
+            OrderConfirmationViewController
+            orderConfirmationViewController.minutes = orderMinutes
+        }
     }
-    */
+    
 
 }

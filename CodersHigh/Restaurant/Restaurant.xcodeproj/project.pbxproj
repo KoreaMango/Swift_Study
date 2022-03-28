@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04B356E627F16A3000913AD8 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B356E527F16A3000913AD8 /* OrderConfirmationViewController.swift */; };
 		04C52BA327EDB30100FA53E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C52BA227EDB30100FA53E4 /* AppDelegate.swift */; };
 		04C52BA727EDB30100FA53E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C52BA627EDB30100FA53E4 /* ViewController.swift */; };
 		04C52BAA27EDB30100FA53E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C52BA827EDB30100FA53E4 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04B356E527F16A3000913AD8 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		04C52B9F27EDB30100FA53E4 /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C52BA227EDB30100FA53E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04C52BA427EDB30100FA53E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				04F27C8827EF719E003857CC /* CategoryTableViewController.swift */,
 				04F27C8A27EF71AC003857CC /* MenuTableViewController.swift */,
 				04F27C8C27EF71B4003857CC /* OrderTableViewController.swift */,
+				04B356E527F16A3000913AD8 /* OrderConfirmationViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				04F27C9127EF729C003857CC /* MenuItem.swift in Sources */,
 				04F27C8927EF719E003857CC /* CategoryTableViewController.swift in Sources */,
 				04F27C9327EF75B7003857CC /* IntermediartModels.swift in Sources */,
+				04B356E627F16A3000913AD8 /* OrderConfirmationViewController.swift in Sources */,
 				04F27C8F27EF7231003857CC /* MenuDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
