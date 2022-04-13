@@ -69,15 +69,22 @@ class MenuTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 if let currentIndexPath = self.tableView.indexPath(for: cell),
                    currentIndexPath != indexPath { return }
-                cell.imageView?.image = image
                 
-                cell.imageView?.contentMode = .scaleAspectFit
+                cell.imageView?.image = image
+                cell.setNeedsLayout()
+                
             }
         }
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+
 
     /*
     // Override to support conditional editing of the table view.
