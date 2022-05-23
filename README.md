@@ -1,5 +1,5 @@
 # 🖥 Swift_Lecture 
-Swift, IOS 강의를 통해서 공부한 기록입니다.
+Swift, iOS 강의를 통해서 공부한 기록입니다.
 
 <br/>
 
